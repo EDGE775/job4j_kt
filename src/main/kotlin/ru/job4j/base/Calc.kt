@@ -16,11 +16,9 @@ fun divide(first: Int, second: Int): Int {
     return first / second
 }
 
-fun maxOfTwo(first: Int, second: Int) : Int
-        = if (first > second) first else second
+fun maxOfTwo(first: Int, second: Int): Int = if (first > second) first else second
 
-fun maxOfThree(first: Int, second: Int, third: Int) : Int
-        = if (first > second) maxOfTwo(first, third) else maxOfTwo(second, third)
+fun maxOfThree(first: Int, second: Int, third: Int): Int = maxOfTwo(first, maxOfTwo(second, third))
 
 fun main() {
     val plus = add(1, 1)
