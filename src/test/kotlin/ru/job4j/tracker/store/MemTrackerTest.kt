@@ -12,7 +12,7 @@ internal class MemTrackerTest {
     @Test
     fun add_whenAddNewItem_thenTrackerHasSameItem() {
         val store = initStore()
-        val item = Item(0, "test1", "test1")
+        val item = Item(name = "test1")
 
         store.add(item)
 
@@ -23,9 +23,9 @@ internal class MemTrackerTest {
     @Test
     fun findAll_whenPutSeveralItems_thenFindTheseItems() {
         val store = initStore()
-        val item1 = Item(0, "test1", "test1")
-        val item2 = Item(0, "test2", "test2")
-        val item3 = Item(0, "test3", "test3")
+        val item1 = Item(name = "test1")
+        val item2 = Item(name = "test2")
+        val item3 = Item(name = "test3")
         store.add(item1)
         store.add(item2)
         store.add(item3)
@@ -38,8 +38,8 @@ internal class MemTrackerTest {
     @Test
     fun findByName_whenFindByName_thenReturnAllWithThisName() {
         val store = initStore()
-        val item1 = Item(0, "test2", "test1")
-        val item2 = Item(0, "test2", "test2")
+        val item1 = Item(name = "test2")
+        val item2 = Item(name = "test2")
         store.add(item1)
         store.add(item2)
 
@@ -51,12 +51,12 @@ internal class MemTrackerTest {
     @Test
     fun replace_whenReplaceItem_thenItemWasReplase() {
         val store = initStore()
-        val item1 = Item(0, "test1", "test1")
-        val item2 = Item(0, "test2", "test2")
+        val item1 = Item(name = "test1")
+        val item2 = Item(name = "test2")
         store.add(item1)
         store.add(item2)
 
-        val item3 = Item(0, "test3", "test3")
+        val item3 = Item(name = "test3")
         store.replace(item1.id, item3)
 
         assertThat(store.findAll())
@@ -68,7 +68,7 @@ internal class MemTrackerTest {
     @Test
     fun delete_whenDeleteSingleItem_thenStoreIsEmpty() {
         val store = initStore()
-        val item1 = Item(0, "test1", "test1")
+        val item1 = Item(name = "test1")
         store.add(item1)
 
         store.delete(item1.id)
@@ -79,7 +79,7 @@ internal class MemTrackerTest {
     @Test
     fun findById_whenFindByItemId_thenReturnThisItem() {
         val store = initStore()
-        val item1 = Item(0, "test1", "test1")
+        val item1 = Item(name = "test1")
         store.add(item1)
 
         assertThat(store.findById(item1.id)).isEqualTo(item1)
