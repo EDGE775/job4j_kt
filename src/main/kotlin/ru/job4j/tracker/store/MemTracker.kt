@@ -5,7 +5,7 @@ import ru.job4j.tracker.model.Item
 
 class MemTracker : Store {
 
-    private val items = ArrayList<Item>()
+    private val items = arrayListOf<Item>()
 
     private var ids = 1;
 
@@ -32,7 +32,7 @@ class MemTracker : Store {
         var isExists = idx != -1
         if (isExists) {
             item.id = id
-            items.set(idx, item)
+            items[idx] = item
         }
         return isExists
     }
