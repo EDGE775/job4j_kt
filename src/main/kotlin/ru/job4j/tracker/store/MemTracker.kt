@@ -3,7 +3,7 @@ package ru.job4j.tracker.store
 import ru.job4j.tracker.model.Item
 
 
-class MemTracker : Store {
+object MemTracker : Store {
 
     private val items = arrayListOf<Item>()
 
@@ -28,8 +28,8 @@ class MemTracker : Store {
     }
 
     override fun replace(id: Int, item: Item): Boolean {
-        var idx = indexOf(id)
-        var isExists = idx != -1
+        val idx = indexOf(id)
+        val isExists = idx != -1
         if (isExists) {
             item.id = id
             items[idx] = item
@@ -38,8 +38,8 @@ class MemTracker : Store {
     }
 
     override fun delete(id: Int): Boolean {
-        var idx = indexOf(id)
-        var isExists = idx != -1
+        val idx = indexOf(id)
+        val isExists = idx != -1
         if (isExists) {
             items.removeAt(idx)
         }

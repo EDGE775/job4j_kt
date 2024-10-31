@@ -7,7 +7,10 @@ import ru.job4j.tracker.model.Item
 
 internal class MemTrackerTest {
 
-    private fun initStore(): Store = MemTracker()
+    private fun initStore(): Store {
+        MemTracker.clearAll()
+        return MemTracker
+    }
 
     @Test
     fun add_whenAddNewItem_thenTrackerHasSameItem() {
