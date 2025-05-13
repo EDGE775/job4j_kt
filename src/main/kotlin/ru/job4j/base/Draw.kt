@@ -22,5 +22,6 @@ fun draw(size: Int) {
 }
 
 fun main() {
-    draw(11)
+    val size = 11
+    draw(size)
 }

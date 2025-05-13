@@ -546,15 +546,17 @@ style:
       - '0'
       - '1'
       - '2'
+      - '3'
+      - '10'
     ignoreHashCodeFunction: true
     ignorePropertyDeclaration: false
-    ignoreLocalVariableDeclaration: false
+    ignoreLocalVariableDeclaration: true
     ignoreConstantDeclaration: true
     ignoreCompanionObjectPropertyDeclaration: true
     ignoreAnnotation: false
     ignoreNamedArgument: true
-    ignoreEnums: false
-    ignoreRanges: false
+    ignoreEnums: true
+    ignoreRanges: true
     ignoreExtensionFunctions: true
   MandatoryBracesIfStatements:
     active: false

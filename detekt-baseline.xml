@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>MagicNumber:Arrays.kt$4</ID>
+    <ID>MagicNumber:Arrays.kt$6</ID>
+    <ID>MagicNumber:Arrays.kt$8</ID>
+    <ID>MagicNumber:Arrays.kt$9</ID>
+    <ID>NewLineAtEndOfFile:Arrays.kt$ru.job4j.base.Arrays.kt</ID>
+    <ID>NewLineAtEndOfFile:ArraysKtTest.kt$ru.job4j.base.ArraysKtTest.kt</ID>
+    <ID>NewLineAtEndOfFile:Calc.kt$ru.job4j.base.Calc.kt</ID>
+    <ID>NewLineAtEndOfFile:CalcTest.kt$ru.job4j.base.CalcTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ConsoleInput.kt$ru.job4j.tracker.input.ConsoleInput.kt</ID>
+    <ID>NewLineAtEndOfFile:ConsoleOutput.kt$ru.job4j.tracker.output.ConsoleOutput.kt</ID>
+    <ID>NewLineAtEndOfFile:CreateItemAction.kt$ru.job4j.tracker.action.CreateItemAction.kt</ID>
+    <ID>NewLineAtEndOfFile:Draw.kt$ru.job4j.base.Draw.kt</ID>
+    <ID>NewLineAtEndOfFile:ExitAction.kt$ru.job4j.tracker.action.ExitAction.kt</ID>
+    <ID>NewLineAtEndOfFile:FindItemsAction.kt$ru.job4j.tracker.action.FindItemsAction.kt</ID>
+    <ID>NewLineAtEndOfFile:Fitness.kt$ru.job4j.base.Fitness.kt</ID>
+    <ID>NewLineAtEndOfFile:HelloWorld.kt$ru.job4j.base.HelloWorld.kt</ID>
+    <ID>NewLineAtEndOfFile:Input.kt$ru.job4j.tracker.input.Input.kt</ID>
+    <ID>NewLineAtEndOfFile:Item.kt$ru.job4j.tracker.model.Item.kt</ID>
+    <ID>NewLineAtEndOfFile:MemStore.kt$ru.job4j.oop.MemStore.kt</ID>
+    <ID>NewLineAtEndOfFile:MemTracker.kt$ru.job4j.tracker.store.MemTracker.kt</ID>
+    <ID>NewLineAtEndOfFile:Output.kt$ru.job4j.tracker.output.Output.kt</ID>
+    <ID>NewLineAtEndOfFile:Profession.kt$ru.job4j.oop.profession.Profession.kt</ID>
+    <ID>NewLineAtEndOfFile:SimpleLinkedList.kt$ru.job4j.oop.SimpleLinkedList.kt</ID>
+    <ID>NewLineAtEndOfFile:SimpleLinkedListTest.kt$ru.job4j.oop.SimpleLinkedListTest.kt</ID>
+    <ID>NewLineAtEndOfFile:Store.kt$ru.job4j.tracker.store.Store.kt</ID>
+    <ID>NewLineAtEndOfFile:Student.kt$ru.job4j.oop.Student.kt</ID>
+    <ID>NewLineAtEndOfFile:UserAction.kt$ru.job4j.tracker.action.UserAction.kt</ID>
+    <ID>PrintStackTrace:StartUI.kt$e</ID>
+    <ID>ThrowsCount:SimpleLinkedList.kt$SimpleLinkedList$private fun findByIndex(index: Int): Node&lt;T&gt;</ID>
+    <ID>TooGenericExceptionCaught:StartUI.kt$e: Exception</ID>
+    <ID>UnusedPrivateMember:CreateItemAction.kt$CreateItemAction$private val out: Output</ID>
+    <ID>UnusedPrivateMember:Draw.kt$verticalValue</ID>
+    <ID>UnusedPrivateMember:FindItemsAction.kt$FindItemsAction$private val out: Output</ID>
+    <ID>UnusedPrivateMember:Profession.kt$val dev: Developer = Developer("Дима", 31, 100000.0)</ID>
+    <ID>UnusedPrivateMember:Profession.kt$val eng: Engineer = Engineer("Сёма", 46, 20)</ID>
+    <ID>UnusedPrivateMember:SimpleLinkedList.kt$SimpleLinkedList$i</ID>
+  </CurrentIssues>
+</SmellBaseline>
