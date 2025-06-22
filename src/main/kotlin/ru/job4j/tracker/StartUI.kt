@@ -12,28 +12,30 @@ import ru.job4j.tracker.store.MemTracker
 import ru.job4j.tracker.store.Store
 import java.lang.Exception
 
-object StartUI {
+class StartUI private constructor(){
 
-    private val output: Output = ConsoleOutput()
+    companion object {
+        private val output: Output = ConsoleOutput()
 
-    fun init(input: Input, tracker: Store, actions: List<UserAction>) {
-        var run = true
-        while (run) {
-            showMenu(actions)
-            val select: Int = input.askInt("Select: ")
-            if (select < 0 || select >= actions.size) {
-                output.println("Wrong input, you can select: 0 .. " + (actions.size - 1))
-                continue
+        fun init(input: Input, tracker: Store, actions: List<UserAction>) {
+            var run = true
+            while (run) {
+                showMenu(actions)
+                val select: Int = input.askInt("Select: ")
+                if (select < 0 || select >= actions.size) {
+                    output.println("Wrong input, you can select: 0 .. " + (actions.size - 1))
+                    continue
+                }
+                val action: UserAction = actions[select]
+                run = action.execute(input, tracker)
             }
-            val action: UserAction = actions[select]
-            run = action.execute(input, tracker)
         }
-    }
 
-    private fun showMenu(actions: List<UserAction>) {
-        println("Menu.")
-        for (i in actions.indices) {
-            println("${i}. ${actions[i].name()}")
+        private fun showMenu(actions: List<UserAction>) {
+            println("Menu.")
+            for (i in actions.indices) {
+                println("${i}. ${actions[i].name()}")
+            }
         }
     }
 }
