@@ -1,8 +1,27 @@
 package ru.job4j.oop.profession
 
-open class Profession(val name: String, val age: Int)
+open class Profession(val name: String, val age: Int) {
 
-class Developer(name: String, age: Int, val salary: Double) : Profession(name, age)
+    open fun getFullName(): String {
+        return name
+    }
+
+    open fun action() {
+        println("some action")
+    }
+}
+
+class Developer(name: String, age: Int, val salary: Double) : Profession(name, age) {
+
+    override fun getFullName(): String {
+        return super.getFullName() + " from subclass"
+    }
+
+    override fun action() {
+        super.action()
+        println("some action from subclass")
+    }
+}
 
 class Engineer(name: String, age: Int, val exp: Int) : Profession(name, age)
 
